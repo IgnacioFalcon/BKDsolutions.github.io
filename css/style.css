@@ -2,7 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    
+}
+
+body {
+    background-image: url(../img/fondo_pagina.jpg);
 }
 
 
@@ -11,10 +15,12 @@
 header {
     display: flex;
     min-height: 75px;
-    background-color: rgb(189, 147, 71);
+    background-image: url(../img/banner.jpg);
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+    border: 1px solid black;
+
 }
 
 header a {
@@ -34,6 +40,8 @@ header a {
 
 nav a {
     font-weight: 600;
+    font-family: 'Gloock', serif;
+    color: rgb(204, 201, 196);
     padding-right: 10px;
 }
 
@@ -43,29 +51,47 @@ nav a:hover {
 
 /* Inicio menu */
 
+
+.titulouno {
+    display: flex;
+    font-size: larger;
+    font-family: 'Gloock', serif;
+    color: rgb(41, 41, 40);
+    text-shadow: 2px 2px rgb(204, 201, 196);
+    justify-content: center;
+    margin-top: 10px;
+}
+
 .items {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 40px;
-    padding: 40px 30px;
-}
-
-.item img{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    cursor: pointer;
-    transition: 0.2s ease;
-}
-.item img:hover {
-    transform: scale(1.04);
 }
 
-.item h4 {
-    padding: 1px;
-    text-align: center;
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
 }
 
+.item p {
+    font-size: medium;
+    font-family: 'Gloock', serif;
+    color: rgb(204, 201, 196);
+    margin: 5px;
+}
+
+
+/* modelo */
+
+model-viewer{
+    width:100%;
+    height:200px;
+    background-color:rgb(46, 48, 40);
+    }
 
 
 
@@ -84,6 +110,19 @@ nav a:hover {
         padding: 10px 0px;
     }
 }
+@media (max-width: 368px){
+    header {
+        flex-direction: column;
+    }
+
+    nav{
+        padding: 10px 0px;
+    }
+    nav a {
+        font-size: smaller;
+        padding-right: 0px;
+    }
+}    
 @media (max-width: 500px){
     header {
         flex-direction: column;
@@ -95,6 +134,7 @@ nav a:hover {
     nav a {
         font-size: small;
     }
+
 }
 
 @media screen and (max-width: 1000px){

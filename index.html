@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <title>MENU RESTO</title>
+
+    <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script> 
 </head>
 <body>
     <header>
@@ -23,20 +25,16 @@
 
     <section class="items">
         <div class="item">
-            <img src="./img/pizza.png" alt="Pizza">
-            <h4>Pizza</h4>
+            <model-viewer src="scene.gltf" alt="Food 3d" shadow-intensity="1" camera-controls auto-rotate ar >
         </div>
         <div class="item">
-            <img src="./img/Hambur.png" alt="Hamburguesa">
-            <h4>Hamburguesa</h4>
+            <model-viewer src="scene.gltf" alt="Food 3d" shadow-intensity="1" camera-controls auto-rotate ar >
         </div>
         <div class="item">
-            <img src="./img/Pasta.png" alt="Pasta">
-            <h4>Pasta</h4>
+            <model-viewer src="scene.gltf" alt="Food 3d" shadow-intensity="1" camera-controls auto-rotate ar >
         </div>
         <div class="item">
-            <img src="./img/Pancho.png" alt="Pancho">
-            <h4>Pancho</h4>
+            <model-viewer src="scene.gltf" alt="Food 3d" shadow-intensity="1" camera-controls auto-rotate ar >
         </div>
     </section>
 
@@ -45,4 +43,14 @@
 
     
 </body>
+
+	<!-- Loads <model-viewer> for modern browsers: -->
+    <script type="module"
+        src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+    </script>
+
+    <!-- Loads <model-viewer> for old browsers like IE11: -->
+    <script nomodule
+        src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js">
+    </script>
 </html>
